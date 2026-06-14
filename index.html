@@ -588,6 +588,161 @@
     }
 
     /* ── RESPONSIVE ── */
+    /* ── COMPARISON TABLE ── */
+    .compare-wrap {
+      margin-top: 3.5rem;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .compare-table {
+      width: 100%;
+      min-width: 640px;
+      border-collapse: collapse;
+      font-size: 0.78rem;
+    }
+
+    .compare-table th {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: var(--cream);
+      padding: 0.9rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(184,154,90,0.3);
+    }
+
+    .compare-table th.highlight { color: var(--gold-light); }
+
+    .compare-table td {
+      padding: 0.85rem 1rem;
+      vertical-align: top;
+      color: rgba(247,243,237,0.6);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      line-height: 1.55;
+    }
+
+    .compare-table td.row-label {
+      color: var(--gold);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .compare-table td.highlight {
+      color: rgba(247,243,237,0.9);
+      background: rgba(184,154,90,0.07);
+    }
+
+    .compare-table tr:last-child td { border-bottom: none; }
+
+    .residency-note {
+      margin-top: 2.5rem;
+      padding: 1.6rem 2rem;
+      background: rgba(184,154,90,0.1);
+      border-left: 2px solid var(--gold);
+      font-size: 0.85rem;
+      color: rgba(247,243,237,0.75);
+      line-height: 1.7;
+    }
+
+    .residency-note strong {
+      color: var(--gold-light);
+      font-weight: 400;
+    }
+
+    /* ── HOW WE WORK ── */
+    .process-list {
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .process-item {
+      padding: 2rem 0;
+      border-top: 1px solid var(--cream-dark);
+      display: grid;
+      grid-template-columns: 2.5rem 1fr;
+      gap: 1.2rem;
+      align-items: start;
+    }
+
+    .process-item:nth-child(odd) { padding-right: 3rem; }
+    .process-item:nth-child(even) { padding-left: 3rem; border-left: 1px solid var(--cream-dark); }
+
+    .process-num {
+      font-family: var(--serif);
+      font-size: 0.85rem;
+      color: var(--gold);
+      padding-top: 0.15rem;
+    }
+
+    .process-item h3 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 1.1rem;
+      color: var(--green-deep);
+      margin-bottom: 0.5rem;
+    }
+
+    .process-item p {
+      font-size: 0.83rem;
+      color: var(--text-light);
+      line-height: 1.75;
+    }
+
+    .value-paths {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--cream-dark);
+    }
+
+    .value-paths-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 1.8rem;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+    }
+
+    .value-item {
+      border-top: 1px solid var(--cream-dark);
+      padding-top: 1rem;
+    }
+
+    .value-item h4 {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: var(--green-deep);
+      margin-bottom: 0.4rem;
+    }
+
+    .value-item p {
+      font-size: 0.75rem;
+      color: var(--text-light);
+      line-height: 1.65;
+    }
+
+    @media (max-width: 900px) {
+      .value-grid { grid-template-columns: repeat(3, 1fr); }
+      .process-list { grid-template-columns: 1fr; }
+      .process-item:nth-child(odd) { padding-right: 0; }
+      .process-item:nth-child(even) { padding-left: 0; border-left: none; }
+    }
+
+    @media (max-width: 640px) {
+      .value-grid { grid-template-columns: 1fr 1fr; }
+    }
+
     @media (max-width: 900px) {
       .who-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
       .land-pillars { grid-template-columns: 1fr 1fr; }
@@ -624,8 +779,8 @@
   <a href="#hero" class="nav-logo">Yaxche</a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#who">Who We Are</a></li>
-    <li><a href="#land">Land Banking</a></li>
-    <li><a href="#capabilities">Capabilities</a></li>
+    <li><a href="#land">Why Costa Rica</a></li>
+    <li><a href="#capabilities">How We Work</a></li>
     <li><a href="#team">Team</a></li>
     <li><a href="#contact" class="nav-cta">Contact Us</a></li>
   </ul>
@@ -648,9 +803,9 @@
 <section id="who">
   <div class="section-inner">
     <div class="section-label">Who We Are</div>
-    <h2>A team built on two decades of <em>resource expertise</em></h2>
+    <h2>A team built on fifteen years of <em>resource expertise</em></h2>
     <p class="lead">Yaxche is an advisory firm focused on business opportunities in Costa Rica. Our work covers land banking, resource sector advisory, and a broader set of opportunities our team sources through years of local and international relationships.</p>
-    <p class="lead">We work with investors and partners who want a well-structured entry into one of Latin America's most stable markets. Costa Rica stands out for its political continuity, strong property rights, water security, and a growing base of international investment activity.</p>
+    <p class="lead">We work with investors and partners who want a well-structured entry into one of Latin America's most stable markets. Costa Rica stands out for its political continuity, full foreign property rights, water security, and a legal framework that has protected private land ownership for over 75 years.</p>
     <div class="who-grid">
       <div class="who-stat">
         <div class="num">15<em>+</em></div>
@@ -672,67 +827,158 @@
   </div>
 </section>
 
-<!-- LAND BANKING -->
+<!-- WHY COSTA RICA -->
 <section id="land">
   <div class="section-inner">
-    <div class="section-label">Land Banking in Costa Rica</div>
-    <h2>Why Costa Rica, <em>why now</em></h2>
-    <p class="lead">Land banking is the practice of acquiring land for the resources it holds and sustains. It has long been used by well-informed families to build wealth across generations.</p>
-    <p class="lead">Costa Rica combines water security, agricultural productivity, and legal stability in a way that is genuinely uncommon. That combination has gone largely unnoticed by international capital. Yaxche finds, verifies, and presents these opportunities to qualified buyers, and manages the full process from introduction through to closing.</p>
+    <div class="section-label">Why Costa Rica</div>
+    <h2>The case for <em>Costa Rica</em></h2>
+    <p class="lead">Land banking is the practice of securing land for the resources it holds and sustains. Well-informed families have used it for generations to build lasting wealth. Costa Rica has the conditions this strategy needs, and institutional capital has not yet arrived.</p>
     <div class="divider"></div>
-    <div class="land-pillars">
+    <div class="land-pillars" style="grid-template-columns: repeat(4, 1fr);">
       <div class="pillar">
         <div class="pillar-icon">∿</div>
-        <h3>Water Security</h3>
-        <p>Among the most water-rich countries in the hemisphere, with protected resources and strong long-term agricultural potential.</p>
+        <h3>Freshwater Security</h3>
+        <p>Year-round rainfall and renewable river systems. Water is now a traded financial instrument (CME Group, NQH2O). Land with embedded freshwater is becoming a strategic resource.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">⚖</div>
         <h3>Legal Stability</h3>
-        <p>Strong property rights, a functioning legal system, and decades of political continuity. Not common in this region.</p>
+        <p>Continuous democracy since 1949. Military abolished constitutionally. Full property rights for foreign nationals, identical to citizens. Clear title through the Registro Nacional.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">◈</div>
-        <h3>Overlooked Capital</h3>
-        <p>International capital has not yet found these land opportunities in any meaningful way. That window is still open.</p>
+        <h3>Agricultural Productivity</h3>
+        <p>Volcanic soils and year-round growing seasons support specialty coffee, cacao, tropical fruits, and timber. No off-season. The land produces continuously.</p>
       </div>
+      <div class="pillar">
+        <div class="pillar-icon">△</div>
+        <h3>Climate Resilience</h3>
+        <p>Elevation buffers against sea-level rise, extreme heat, and hurricane risk. Stable year-round temperate climate. Ranked 58th globally on the 2024 Global Peace Index.</p>
+      </div>
+    </div>
+
+    <div class="residency-note">
+      <strong>Investor Residency pathway:</strong> A qualifying real estate investment of USD $150,000 or more makes a foreign national eligible to apply for Costa Rican Investor Residency, including spouse and dependent children. No full-time presence required to maintain status.
+    </div>
+
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>New Zealand</th>
+            <th>Australia</th>
+            <th>Uruguay</th>
+            <th>Portugal</th>
+            <th class="highlight">Costa Rica</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">Foreign ownership</td>
+            <td>OIO approval required.</td>
+            <td>FIRB approval above AUD $15M.</td>
+            <td>Unrestricted.</td>
+            <td>Non-EU faces restrictions. Golden Visa closed 2023.</td>
+            <td class="highlight">Unrestricted. Full rights identical to citizens.</td>
+          </tr>
+          <tr>
+            <td class="row-label">Residency via investment</td>
+            <td>No land-linked pathway. NZD $5M+ required.</td>
+            <td>No direct land-linked pathway.</td>
+            <td>Tax residency possible. No minimum.</td>
+            <td>Real estate route closed since 2023.</td>
+            <td class="highlight">USD $150,000 qualifying real estate. Full family included.</td>
+          </tr>
+          <tr>
+            <td class="row-label">Foreign income tax</td>
+            <td>Foreign income taxable in most cases.</td>
+            <td>Foreign income taxable.</td>
+            <td>Territorial system. Some exemptions.</td>
+            <td>EU-standard. Foreign income generally taxable.</td>
+            <td class="highlight">Costa Rica does not tax foreign-sourced income for residents.</td>
+          </tr>
+          <tr>
+            <td class="row-label">Institutional capital</td>
+            <td>High. Early-mover window closed.</td>
+            <td>Very high. Mature market.</td>
+            <td>High and growing. Prices at 25-year record.</td>
+            <td>High. Premium rural land fully priced.</td>
+            <td class="highlight">Low. Institutional capital has not yet arrived. Window open.</td>
+          </tr>
+          <tr>
+            <td class="row-label">Freshwater security</td>
+            <td>Good. Stress increasing in some regions.</td>
+            <td>Variable. Murray-Darling severely stressed.</td>
+            <td>Moderate. No severe stress.</td>
+            <td>Southern Europe increasingly drought-exposed.</td>
+            <td class="highlight">Exceptional. Year-round renewable rivers and aquifers.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
 
-<!-- CAPABILITIES -->
+<!-- HOW WE WORK -->
 <section id="capabilities">
   <div class="section-inner">
-    <div class="section-label">Capabilities</div>
-    <h2>What <em>we do</em></h2>
-    <p class="lead">Our team covers the full process, from finding and evaluating opportunities to execution and long-term positioning.</p>
-    <div class="cap-list">
-      <div class="cap-item">
-        <div class="cap-num">01</div>
+    <div class="section-label">How We Work</div>
+    <h2><em>How</em> we work</h2>
+    <p class="lead">Yaxche does not simply present opportunities. We manage the full pathway from first introduction through to closing, supported by a team with deep roots in Costa Rica and international transaction experience.</p>
+    <div class="process-list">
+      <div class="process-item">
+        <div class="process-num">1</div>
         <div>
-          <h3>Land Identification &amp; Acquisition</h3>
-          <p>Finding, evaluating, and structuring land acquisitions in Costa Rica's strongest growth areas.</p>
+          <h3>Introduction and Qualification</h3>
+          <p>We present verified, off-market land opportunities in Costa Rica to qualified international buyers. All opportunities are independently assessed before presentation.</p>
         </div>
       </div>
-      <div class="cap-item">
-        <div class="cap-num">02</div>
+      <div class="process-item">
+        <div class="process-num">2</div>
         <div>
-          <h3>Legal &amp; Immigration</h3>
-          <p>Access to top Costa Rican legal counsel for real estate transactions, immigration, residency, and corporate matters.</p>
+          <h3>Legal and Structural Review</h3>
+          <p>Our Costa Rican legal counsel conducts full title verification, ownership structure review, and advises on the most appropriate acquisition structure for the buyer's jurisdiction and objectives.</p>
         </div>
       </div>
-      <div class="cap-item">
-        <div class="cap-num">03</div>
+      <div class="process-item">
+        <div class="process-num">3</div>
         <div>
-          <h3>Development &amp; Operations</h3>
-          <p>Project management from permitting and construction through to delivery and ongoing rental operations.</p>
+          <h3>Tax and Residency Advisory</h3>
+          <p>We guide buyers through the full tax picture in Costa Rica and in coordination with their home jurisdiction. For buyers pursuing Investor Residency, immigration counsel is engaged in parallel.</p>
         </div>
       </div>
-      <div class="cap-item">
-        <div class="cap-num">04</div>
+      <div class="process-item">
+        <div class="process-num">4</div>
         <div>
-          <h3>Resource Sector Advisory</h3>
-          <p>Fifteen years of resource sector experience across the Americas, applied to a broader range of opportunities in Costa Rica for qualified partners.</p>
+          <h3>Transaction and Closing</h3>
+          <p>We coordinate the full transaction process, from offer and negotiation through to title transfer and registration. The buyer has a single point of contact throughout.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="value-paths">
+      <div class="value-paths-label">Value creation pathways once acquired</div>
+      <div class="value-grid">
+        <div class="value-item">
+          <h4>Land Appreciation</h4>
+          <p>Acquire before recognition. Hold through repricing.</p>
+        </div>
+        <div class="value-item">
+          <h4>Agricultural Income</h4>
+          <p>Coffee, cacao, and tropical fruit income from day one.</p>
+        </div>
+        <div class="value-item">
+          <h4>Eco-Hospitality</h4>
+          <p>Boutique lodge or wellness retreat on a fraction of the land.</p>
+        </div>
+        <div class="value-item">
+          <h4>Carbon Credits</h4>
+          <p>Tropical forest restoration generating voluntary carbon income.</p>
+        </div>
+        <div class="value-item">
+          <h4>Family Reserve</h4>
+          <p>A private sanctuary stewarded across generations.</p>
         </div>
       </div>
     </div>
@@ -757,7 +1003,7 @@
           <span class="tag">Land Banking</span>
           <span class="tag">ESG Strategy</span>
         </div>
-        <p class="team-bio">JD/LLB. Fifteen years in mining and resource development across the Americas, now focused on Costa Rica's land and resource opportunities.</p>
+        <p class="team-bio">JD/LLB. Fifteen years in mining and resource development across the Americas, bringing that experience to Costa Rica's land and resource opportunities.</p>
       </div>
 
       <div class="team-card">
@@ -837,7 +1083,7 @@
         </div>
         <div class="contact-row">
           <div class="contact-label">Email</div>
-          <div class="contact-val"><a href="mailto:info@yaxche.com">info@yaxche.com</a></div>
+          <div class="contact-val"><a href="mailto:elena@yaxche.com">elena@yaxche.com</a></div>
         </div>
       </div>
     </div>
@@ -893,7 +1139,7 @@
     const subject = document.getElementById('subject').value || 'Yaxche Inquiry';
     const message = document.getElementById('message').value;
     const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-    window.location.href = `mailto:info@yaxche.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:elena@yaxche.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   }
 </script>
 
