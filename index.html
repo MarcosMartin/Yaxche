@@ -933,7 +933,7 @@
     </div>
 
     <div class="contact-form-side">
-      <form id="contactForm" onsubmit="handleSubmit(event)">
+      <form id="contactForm">
         <div class="form-group">
           <label for="name">Full Name</label>
           <input type="text" id="name" name="name" placeholder="Your name" required />
@@ -950,8 +950,15 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Tell us about your interests or how we can help." required></textarea>
         </div>
-        <button type="submit" class="btn-submit">Send Message</button>
+        <button type="submit" class="btn-submit" id="submitBtn">Send Message</button>
+        <p id="formError" style="display:none; margin-top: 1rem; font-size: 0.8rem; color: rgba(247,243,237,0.6);">Something went wrong. Please email us directly at <a href="mailto:elena@yaxche.group" style="color: var(--gold-light);">elena@yaxche.group</a></p>
       </form>
+
+      <div id="formSuccess" style="display:none; padding: 2.5rem 0;">
+        <div style="width: 36px; height: 1px; background: var(--gold); margin-bottom: 1.8rem;"></div>
+        <p style="font-family: var(--serif); font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 300; color: var(--cream); line-height: 1.4; margin-bottom: 1rem;">Your message has been received.</p>
+        <p style="font-size: 0.85rem; color: rgba(247,243,237,0.6); line-height: 1.8;">Elena will be in touch directly. We look forward to the conversation.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -973,15 +980,40 @@
     nav.style.boxShadow = window.scrollY > 20 ? '0 2px 32px rgba(0,0,0,0.4)' : 'none';
   });
 
-  function handleSubmit(e) {
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value || 'Yaxche Inquiry';
-    const message = document.getElementById('message').value;
-    const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
-    window.location.href = `mailto:elena@yaxche.group?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-  }
+    const btn = document.getElementById('submitBtn');
+    const errorEl = document.getElementById('formError');
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    errorEl.style.display = 'none';
+
+    const data = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      subject: document.getElementById('subject').value || 'Yaxche Inquiry',
+      message: document.getElementById('message').value,
+    };
+
+    try {
+      const res = await fetch('https://formspree.io/f/REPLACE_WITH_YOUR_ID', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        document.getElementById('contactForm').style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      errorEl.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = 'Send Message';
+    }
+  });
 </script>
 
 </body>
