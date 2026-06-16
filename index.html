@@ -114,9 +114,12 @@
       content: '';
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(ellipse 70% 60% at 75% 25%, rgba(61,97,66,0.3) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 50% at 10% 80%, rgba(184,154,90,0.1) 0%, transparent 60%);
+      background: linear-gradient(
+        to right,
+        rgba(18, 30, 18, 0.78) 0%,
+        rgba(18, 30, 18, 0.45) 50%,
+        rgba(18, 30, 18, 0.15) 100%
+      );
       pointer-events: none;
     }
 
@@ -699,7 +702,7 @@
 </nav>
 
 <!-- HERO -->
-<section id="hero">
+<section id="hero" style="background-image: url('assets/hero-forest.jpg'); background-size: cover; background-position: center 40%;">
   <div class="hero-eyebrow">Yaxche</div>
   <h1 class="hero-title">Those who preserve wealth across generations have always known: <em>land endures.</em></h1>
   <div class="hero-divider"></div>
