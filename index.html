@@ -35,7 +35,7 @@
       color: var(--text-dark);
       background: var(--cream);
       line-height: 1.7;
-      font-size: 16px;
+      font-size: 17px;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -119,7 +119,8 @@
     }
 
     .hero-eyebrow {
-      font-size: 0.7rem;
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
       letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--gold);
@@ -159,18 +160,19 @@
     }
 
     .hero-location {
-      font-size: 0.7rem;
+      font-family: var(--serif);
+      font-size: clamp(1rem, 2vw, 1.4rem);
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 1rem;
+      margin-bottom: 0.6rem;
     }
 
     .hero-sub {
       font-family: var(--serif);
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      font-size: clamp(1.2rem, 2.2vw, 1.6rem);
       font-style: italic;
-      color: rgba(247,243,237,0.5);
+      color: rgba(247,243,237,0.7);
       margin-bottom: 3rem;
     }
 
@@ -198,11 +200,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.5rem;
-      color: rgba(247,243,237,0.3);
-      font-size: 0.65rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
     }
 
     .hero-scroll::after {
@@ -261,9 +258,9 @@
     }
 
     .lead {
-      font-size: 1.05rem;
+      font-size: 1.12rem;
       line-height: 1.9;
-      color: var(--text-mid);
+      color: var(--text-dark);
       max-width: 68ch;
       margin-bottom: 1.5rem;
     }
@@ -370,7 +367,13 @@
     .residency-note strong { color: var(--gold-light); font-weight: 400; }
 
     /* ── FROM INTRODUCTION TO LEGACY (How We Work) ── */
-    #capabilities { background: var(--cream); }
+    #capabilities { background: var(--green-deep); }
+
+    #capabilities .section-label { color: var(--gold-light); }
+    #capabilities .section-label::before { background: var(--gold-light); }
+    #capabilities h2 { color: var(--cream); }
+    #capabilities h2 em { color: var(--gold-light); }
+    #capabilities .lead { color: rgba(247,243,237,0.85); }
 
     .process-list {
       margin-top: 3rem;
@@ -380,42 +383,44 @@
     }
 
     .process-item {
-      padding: 2.2rem 0;
-      border-top: 1px solid var(--cream-dark);
+      padding: 2.5rem 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
       display: grid;
-      grid-template-columns: 2.5rem 1fr;
-      gap: 1.2rem;
+      grid-template-columns: 5rem 1fr;
+      gap: 1rem;
       align-items: start;
     }
 
     .process-item:nth-child(odd) { padding-right: 3.5rem; }
-    .process-item:nth-child(even) { padding-left: 3.5rem; border-left: 1px solid var(--cream-dark); }
+    .process-item:nth-child(even) { padding-left: 3.5rem; border-left: 1px solid rgba(255,255,255,0.1); }
 
     .process-num {
       font-family: var(--serif);
-      font-size: 0.9rem;
-      color: var(--gold);
+      font-size: 3.5rem;
+      font-weight: 300;
+      color: rgba(184,154,90,0.4);
+      line-height: 1;
       padding-top: 0.1rem;
     }
 
     .process-item h3 {
       font-family: var(--serif);
       font-weight: 400;
-      font-size: 1.15rem;
-      color: var(--green-deep);
-      margin-bottom: 0.6rem;
+      font-size: 1.25rem;
+      color: var(--cream);
+      margin-bottom: 0.7rem;
     }
 
     .process-item p {
-      font-size: 0.85rem;
-      color: var(--text-mid);
-      line-height: 1.8;
+      font-size: 0.92rem;
+      color: rgba(247,243,237,0.75);
+      line-height: 1.85;
     }
 
     /* ── ROOTED IN WHAT LASTS (Who We Are) ── */
     #who { background: var(--white); }
 
-    #who .lead { color: var(--text-mid); }
+    #who .lead { color: var(--text-dark); font-size: 1.15rem; }
 
     /* ── SIX EXPERTS (Team) ── */
     #team { background: var(--cream); }
@@ -437,24 +442,24 @@
     }
 
     .team-avatar {
-      width: 80px;
-      height: 80px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       background: var(--cream-dark);
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.4rem;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--serif);
-      font-size: 1.5rem;
+      font-size: 2rem;
       color: var(--green-light);
       overflow: hidden;
       flex-shrink: 0;
     }
 
     .team-avatar img {
-      width: 80px;
-      height: 80px;
+      width: 130px;
+      height: 130px;
       object-fit: cover;
       object-position: center top;
       border-radius: 50%;
@@ -501,8 +506,8 @@
     }
 
     .team-bio {
-      font-size: 0.84rem;
-      color: var(--text-mid);
+      font-size: 0.92rem;
+      color: var(--text-dark);
       line-height: 1.8;
     }
 
@@ -705,7 +710,7 @@
   <p class="hero-location">Costa Rica</p>
   <p class="hero-sub">One of the world's most undiscovered markets.</p>
   <a href="#contact" class="btn-primary">Begin the Conversation</a>
-  <div class="hero-scroll">Explore</div>
+  <div class="hero-scroll"></div>
 </section>
 
 <!-- WHILE OTHERS LOOK ELSEWHERE -->
@@ -714,7 +719,7 @@
     <div class="section-label">Why Costa Rica</div>
     <h2>While Others Look <em>Elsewhere</em></h2>
 
-    <p class="lead">Those who think in generations are quietly securing something no market can manufacture: land with renewable freshwater, political stability, and the ability to produce food.</p>
+    <p class="lead">Those, who think in generations, are quietly securing something no market can manufacture: land with renewable freshwater, political stability, and the ability to produce food.</p>
     <p class="lead">From family offices in London to sovereign funds in the Gulf, from the mountains of New Zealand to the valleys of Uruguay, the thesis is the same. Land with the right fundamentals holds value across generations, currencies, and cycles.</p>
     <p class="lead">Costa Rica has every condition this strategy requires. It remains, for now, largely undiscovered.</p>
 
@@ -746,7 +751,7 @@
     </div>
 
     <div class="residency-note">
-      <strong>Investor Residency pathway:</strong> A qualifying real estate investment of USD $150,000 or more makes a foreign national eligible to apply for Costa Rican Investor Residency, including spouse and dependent children. No full-time presence required to maintain status.
+      <strong>Investor Residency pathway:</strong> A qualifying real estate investment of USD $150,000 makes a foreign national eligible to apply for Costa Rican Investor Residency, including spouse and dependent children. No full-time presence required to maintain status.
     </div>
   </div>
 </section>
@@ -861,7 +866,7 @@
       </div>
 
       <div class="team-card">
-        <div class="team-avatar">EW</div>
+        <div class="team-avatar" id="eric-avatar">EW</div>
         <div class="team-name">Eric Wagenknecht</div>
         <div class="team-title">Development &amp; Operations</div>
         <div class="team-location">Vail, Colorado / Costa Rica</div>
