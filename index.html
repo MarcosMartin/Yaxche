@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yaxche | Legacy Resilience Investing</title>
-  <meta name="description" content="Yaxche is an advisory firm focused on land banking and resource opportunities in Costa Rica, working with qualified international investors." />
+  <meta name="description" content="Yaxche identifies, verifies, and structures land opportunities in Costa Rica for qualified international investors and families." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -115,27 +115,27 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 60% at 80% 20%, rgba(61,97,66,0.25) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 50% at 10% 80%, rgba(184,154,90,0.08) 0%, transparent 60%);
+        radial-gradient(ellipse 70% 60% at 75% 25%, rgba(61,97,66,0.3) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 10% 80%, rgba(184,154,90,0.1) 0%, transparent 60%);
       pointer-events: none;
     }
 
     .hero-eyebrow {
       font-size: 0.7rem;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
     }
 
     .hero-title {
       font-family: var(--serif);
       font-weight: 300;
-      font-size: clamp(3rem, 7vw, 5.5rem);
-      line-height: 1.1;
+      font-size: clamp(3.2rem, 7.5vw, 6rem);
+      line-height: 1.08;
       color: var(--cream);
-      max-width: 14ch;
-      margin-bottom: 0.4rem;
+      max-width: 18ch;
+      margin-bottom: 2.2rem;
     }
 
     .hero-title em {
@@ -143,23 +143,37 @@
       color: var(--gold-light);
     }
 
-    .hero-sub {
-      font-family: var(--serif);
-      font-size: clamp(1.1rem, 2.5vw, 1.45rem);
-      font-weight: 300;
-      font-style: italic;
-      color: rgba(247,243,237,0.55);
-      margin-bottom: 2.8rem;
-      letter-spacing: 0.01em;
+    .hero-divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 2rem;
     }
 
-    .hero-tagline {
-      font-size: 0.85rem;
-      letter-spacing: 0.08em;
-      color: rgba(247,243,237,0.45);
+    .hero-body {
+      font-family: var(--serif);
+      font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+      font-weight: 300;
+      color: rgba(247,243,237,0.75);
+      max-width: 44ch;
+      line-height: 1.65;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-location {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .hero-sub {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      font-style: italic;
+      color: rgba(247,243,237,0.5);
       margin-bottom: 3rem;
-      max-width: 42ch;
-      line-height: 1.9;
     }
 
     .btn-primary {
@@ -169,7 +183,7 @@
       text-transform: uppercase;
       color: var(--green-deep);
       background: var(--gold);
-      padding: 0.9rem 2.2rem;
+      padding: 0.9rem 2.4rem;
       text-decoration: none;
       border-radius: 1px;
       transition: background 0.2s;
@@ -203,12 +217,12 @@
     }
 
     @keyframes scroll-line {
-      0%, 100% { opacity: 0.3; transform: scaleY(1); }
-      50% { opacity: 0.8; transform: scaleY(1.1); }
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.9; }
     }
 
     /* ── SECTIONS ── */
-    section { padding: 6rem 2.5rem; }
+    section { padding: 7rem 2.5rem; }
 
     .section-inner {
       max-width: 1080px;
@@ -217,7 +231,7 @@
 
     .section-label {
       font-size: 0.65rem;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 1.5rem;
@@ -231,15 +245,16 @@
       width: 28px;
       height: 1px;
       background: var(--gold);
+      flex-shrink: 0;
     }
 
     h2 {
       font-family: var(--serif);
       font-weight: 300;
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.2;
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      line-height: 1.15;
       color: var(--green-deep);
-      margin-bottom: 1.75rem;
+      margin-bottom: 2rem;
     }
 
     h2 em {
@@ -249,46 +264,54 @@
 
     .lead {
       font-size: 1.05rem;
-      line-height: 1.85;
+      line-height: 1.9;
       color: var(--text-mid);
       max-width: 68ch;
-      margin-bottom: 1.4rem;
+      margin-bottom: 1.5rem;
     }
 
-    /* ── WHO WE ARE ── */
-    #who { background: var(--white); }
-
-    .who-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      margin-top: 3rem;
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 2.5rem 0;
     }
 
-    .who-stat {
-      border-top: 1px solid var(--cream-dark);
-      padding-top: 1.5rem;
+    /* ── SECTION IMAGE ── */
+    .section-image {
+      width: 100%;
+      margin: 3.5rem 0;
+      overflow: hidden;
+      position: relative;
     }
 
-    .who-stat .num {
-      font-family: var(--serif);
-      font-size: 3rem;
-      font-weight: 300;
-      color: var(--green-deep);
-      line-height: 1;
-      margin-bottom: 0.4rem;
+    .section-image img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
     }
 
-    .who-stat .num em { color: var(--gold); font-style: normal; }
-
-    .who-stat p {
-      font-size: 0.82rem;
-      color: var(--text-light);
-      letter-spacing: 0.05em;
+    .section-image-placeholder {
+      width: 100%;
+      height: 420px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(184,154,90,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
+      color: rgba(247,243,237,0.25);
     }
 
-    /* ── LAND BANKING ── */
+    .section-image-placeholder.light {
+      background: var(--cream-dark);
+      color: rgba(28,43,30,0.25);
+      border-color: rgba(28,43,30,0.1);
+    }
+
+    /* ── WHILE OTHERS (Why CR) ── */
     #land {
       background: var(--green-deep);
       color: var(--cream);
@@ -298,27 +321,27 @@
     #land h2 em { color: var(--gold-light); }
     #land .section-label { color: var(--gold-light); }
     #land .section-label::before { background: var(--gold-light); }
-
-    #land .lead { color: rgba(247,243,237,0.72); }
+    #land .lead { color: rgba(247,243,237,0.85); max-width: 62ch; }
+    #land .divider { background: rgba(184,154,90,0.5); }
 
     .land-pillars {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 2px;
       margin-top: 3.5rem;
     }
 
     .pillar {
-      background: rgba(255,255,255,0.04);
-      padding: 2.2rem 1.8rem;
-      border-top: 1px solid rgba(184,154,90,0.3);
+      background: rgba(255,255,255,0.05);
+      padding: 2.4rem 2rem;
+      border-top: 1px solid rgba(184,154,90,0.4);
     }
 
     .pillar-icon {
       font-family: var(--serif);
-      font-size: 2.2rem;
+      font-size: 2rem;
       color: var(--gold);
-      margin-bottom: 1rem;
+      margin-bottom: 1.1rem;
       font-style: italic;
     }
 
@@ -327,27 +350,39 @@
       font-weight: 400;
       font-size: 1.15rem;
       color: var(--cream);
-      margin-bottom: 0.6rem;
+      margin-bottom: 0.8rem;
     }
 
     .pillar p {
-      font-size: 0.83rem;
-      color: rgba(247,243,237,0.55);
-      line-height: 1.75;
+      font-size: 0.85rem;
+      color: rgba(247,243,237,0.82);
+      line-height: 1.8;
     }
 
-    /* ── CAPABILITIES ── */
+    .residency-note {
+      margin-top: 3rem;
+      padding: 1.8rem 2.2rem;
+      background: rgba(184,154,90,0.1);
+      border-left: 2px solid var(--gold);
+      font-size: 0.88rem;
+      color: rgba(247,243,237,0.82);
+      line-height: 1.8;
+    }
+
+    .residency-note strong { color: var(--gold-light); font-weight: 400; }
+
+    /* ── FROM INTRODUCTION TO LEGACY (How We Work) ── */
     #capabilities { background: var(--cream); }
 
-    .cap-list {
+    .process-list {
       margin-top: 3rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0;
     }
 
-    .cap-item {
-      padding: 2rem 0;
+    .process-item {
+      padding: 2.2rem 0;
       border-top: 1px solid var(--cream-dark);
       display: grid;
       grid-template-columns: 2.5rem 1fr;
@@ -355,66 +390,89 @@
       align-items: start;
     }
 
-    .cap-num {
+    .process-item:nth-child(odd) { padding-right: 3.5rem; }
+    .process-item:nth-child(even) { padding-left: 3.5rem; border-left: 1px solid var(--cream-dark); }
+
+    .process-num {
       font-family: var(--serif);
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       color: var(--gold);
-      padding-top: 0.15rem;
+      padding-top: 0.1rem;
     }
 
-    .cap-item h3 {
+    .process-item h3 {
       font-family: var(--serif);
       font-weight: 400;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: var(--green-deep);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
-    .cap-item p {
-      font-size: 0.83rem;
-      color: var(--text-light);
-      line-height: 1.75;
+    .process-item p {
+      font-size: 0.85rem;
+      color: var(--text-mid);
+      line-height: 1.8;
     }
 
-    .cap-item:nth-child(odd) { padding-right: 3rem; }
-    .cap-item:nth-child(even) { padding-left: 3rem; border-left: 1px solid var(--cream-dark); }
+    /* ── ROOTED IN WHAT LASTS (Who We Are) ── */
+    #who { background: var(--white); }
 
-    /* ── TEAM ── */
-    #team { background: var(--white); }
+    #who .lead { color: var(--text-mid); }
+
+    /* ── SIX EXPERTS (Team) ── */
+    #team { background: var(--cream); }
+
+    .team-intro {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      font-style: italic;
+      color: var(--text-mid);
+      max-width: 62ch;
+      line-height: 1.8;
+      margin-bottom: 3.5rem;
+    }
 
     .team-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 3rem 2rem;
-      margin-top: 3rem;
+      gap: 3.5rem 2.5rem;
     }
 
-    .team-card {}
-
     .team-avatar {
-      width: 72px;
-      height: 72px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       background: var(--cream-dark);
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.3rem;
       display: flex;
       align-items: center;
       justify-content: center;
       font-family: var(--serif);
       font-size: 1.5rem;
       color: var(--green-light);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .team-avatar img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 50%;
+      display: block;
     }
 
     .team-name {
       font-family: var(--serif);
       font-weight: 400;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: var(--green-deep);
       margin-bottom: 0.2rem;
     }
 
     .team-title {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       color: var(--gold);
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -424,30 +482,30 @@
     .team-location {
       font-size: 0.75rem;
       color: var(--text-light);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.8rem;
     }
 
     .team-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 0.35rem;
-      margin-bottom: 0.9rem;
+      margin-bottom: 1rem;
     }
 
     .tag {
-      font-size: 0.65rem;
+      font-size: 0.63rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--text-mid);
       border: 1px solid var(--cream-dark);
-      padding: 0.25rem 0.6rem;
+      padding: 0.25rem 0.65rem;
       border-radius: 20px;
     }
 
     .team-bio {
-      font-size: 0.82rem;
-      color: var(--text-light);
-      line-height: 1.75;
+      font-size: 0.84rem;
+      color: var(--text-mid);
+      line-height: 1.8;
     }
 
     /* ── CONTACT ── */
@@ -459,7 +517,7 @@
     #contact .section-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 5rem;
+      gap: 6rem;
       align-items: start;
     }
 
@@ -467,16 +525,31 @@
     #contact h2 em { color: var(--gold-light); }
     #contact .section-label { color: var(--gold-light); }
     #contact .section-label::before { background: var(--gold-light); }
-    #contact .lead { color: rgba(247,243,237,0.65); }
 
-    .contact-details { margin-top: 2rem; }
+    .contact-statement {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 1.8vw, 1.2rem);
+      font-style: italic;
+      color: rgba(247,243,237,0.75);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-note {
+      font-size: 0.85rem;
+      color: rgba(247,243,237,0.6);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-details { }
 
     .contact-row {
       display: flex;
       gap: 1rem;
       padding: 1.2rem 0;
       border-bottom: 1px solid rgba(255,255,255,0.07);
-      font-size: 0.83rem;
+      font-size: 0.84rem;
     }
 
     .contact-row:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
@@ -485,24 +558,24 @@
       width: 5rem;
       flex-shrink: 0;
       color: var(--gold);
-      font-size: 0.65rem;
+      font-size: 0.63rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       padding-top: 0.1rem;
     }
 
-    .contact-val { color: rgba(247,243,237,0.75); line-height: 1.6; }
-    .contact-val a { color: rgba(247,243,237,0.75); text-decoration: none; }
+    .contact-val { color: rgba(247,243,237,0.82); line-height: 1.65; }
+    .contact-val a { color: rgba(247,243,237,0.82); text-decoration: none; }
     .contact-val a:hover { color: var(--gold-light); }
 
     .contact-form-side { padding-top: 0.5rem; }
 
-    .form-group { margin-bottom: 1.2rem; }
+    .form-group { margin-bottom: 1.3rem; }
 
     .form-group label {
       display: block;
-      font-size: 0.65rem;
-      letter-spacing: 0.12em;
+      font-size: 0.63rem;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--gold);
       margin-bottom: 0.5rem;
@@ -511,10 +584,10 @@
     .form-group input,
     .form-group textarea {
       width: 100%;
-      background: rgba(255,255,255,0.06);
+      background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.12);
       color: var(--cream);
-      padding: 0.75rem 1rem;
+      padding: 0.8rem 1rem;
       font-family: var(--sans);
       font-size: 0.85rem;
       font-weight: 300;
@@ -524,24 +597,20 @@
       min-height: 44px;
     }
 
-    .form-group textarea { min-height: 110px; resize: vertical; }
+    .form-group textarea { min-height: 120px; resize: vertical; }
 
     .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: var(--gold);
-    }
+    .form-group textarea:focus { border-color: var(--gold); }
 
     .form-group input::placeholder,
-    .form-group textarea::placeholder {
-      color: rgba(247,243,237,0.3);
-    }
+    .form-group textarea::placeholder { color: rgba(247,243,237,0.28); }
 
     .btn-submit {
       width: 100%;
       background: var(--gold);
       color: var(--green-deep);
       border: none;
-      padding: 0.95rem 2rem;
+      padding: 1rem 2rem;
       font-family: var(--sans);
       font-size: 0.75rem;
       font-weight: 500;
@@ -556,8 +625,8 @@
 
     /* ── FOOTER ── */
     footer {
-      background: #111a12;
-      padding: 2rem 2.5rem;
+      background: #0f160f;
+      padding: 2.2rem 2.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -570,187 +639,26 @@
       font-size: 0.85rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: rgba(247,243,237,0.45);
+      color: rgba(247,243,237,0.35);
     }
 
     footer p {
-      font-size: 0.72rem;
-      color: rgba(247,243,237,0.3);
+      font-size: 0.7rem;
+      color: rgba(247,243,237,0.25);
       letter-spacing: 0.05em;
     }
 
-    /* ── DIVIDER ── */
-    .divider {
-      width: 40px;
-      height: 1px;
-      background: var(--gold);
-      margin: 2rem 0;
-    }
-
     /* ── RESPONSIVE ── */
-    /* ── COMPARISON TABLE ── */
-    .compare-wrap {
-      margin-top: 3.5rem;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .compare-table {
-      width: 100%;
-      min-width: 640px;
-      border-collapse: collapse;
-      font-size: 0.78rem;
-    }
-
-    .compare-table th {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-size: 0.9rem;
-      color: var(--cream);
-      padding: 0.9rem 1rem;
-      text-align: left;
-      border-bottom: 1px solid rgba(184,154,90,0.3);
-    }
-
-    .compare-table th.highlight { color: var(--gold-light); }
-
-    .compare-table td {
-      padding: 0.85rem 1rem;
-      vertical-align: top;
-      color: rgba(247,243,237,0.6);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      line-height: 1.55;
-    }
-
-    .compare-table td.row-label {
-      color: var(--gold);
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .compare-table td.highlight {
-      color: rgba(247,243,237,0.9);
-      background: rgba(184,154,90,0.07);
-    }
-
-    .compare-table tr:last-child td { border-bottom: none; }
-
-    .residency-note {
-      margin-top: 2.5rem;
-      padding: 1.6rem 2rem;
-      background: rgba(184,154,90,0.1);
-      border-left: 2px solid var(--gold);
-      font-size: 0.85rem;
-      color: rgba(247,243,237,0.75);
-      line-height: 1.7;
-    }
-
-    .residency-note strong {
-      color: var(--gold-light);
-      font-weight: 400;
-    }
-
-    /* ── HOW WE WORK ── */
-    .process-list {
-      margin-top: 3rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-    }
-
-    .process-item {
-      padding: 2rem 0;
-      border-top: 1px solid var(--cream-dark);
-      display: grid;
-      grid-template-columns: 2.5rem 1fr;
-      gap: 1.2rem;
-      align-items: start;
-    }
-
-    .process-item:nth-child(odd) { padding-right: 3rem; }
-    .process-item:nth-child(even) { padding-left: 3rem; border-left: 1px solid var(--cream-dark); }
-
-    .process-num {
-      font-family: var(--serif);
-      font-size: 0.85rem;
-      color: var(--gold);
-      padding-top: 0.15rem;
-    }
-
-    .process-item h3 {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-size: 1.1rem;
-      color: var(--green-deep);
-      margin-bottom: 0.5rem;
-    }
-
-    .process-item p {
-      font-size: 0.83rem;
-      color: var(--text-light);
-      line-height: 1.75;
-    }
-
-    .value-paths {
-      margin-top: 4rem;
-      padding-top: 3rem;
-      border-top: 1px solid var(--cream-dark);
-    }
-
-    .value-paths-label {
-      font-size: 0.65rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--text-light);
-      margin-bottom: 1.8rem;
-    }
-
-    .value-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 1rem;
-    }
-
-    .value-item {
-      border-top: 1px solid var(--cream-dark);
-      padding-top: 1rem;
-    }
-
-    .value-item h4 {
-      font-family: var(--serif);
-      font-weight: 400;
-      font-size: 0.95rem;
-      color: var(--green-deep);
-      margin-bottom: 0.4rem;
-    }
-
-    .value-item p {
-      font-size: 0.75rem;
-      color: var(--text-light);
-      line-height: 1.65;
+    @media (max-width: 1024px) {
+      .land-pillars { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 900px) {
-      .value-grid { grid-template-columns: repeat(3, 1fr); }
       .process-list { grid-template-columns: 1fr; }
       .process-item:nth-child(odd) { padding-right: 0; }
       .process-item:nth-child(even) { padding-left: 0; border-left: none; }
-    }
-
-    @media (max-width: 640px) {
-      .value-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 900px) {
-      .who-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
-      .land-pillars { grid-template-columns: 1fr 1fr; }
-      .cap-list { grid-template-columns: 1fr; }
-      .cap-item:nth-child(odd) { padding-right: 0; }
-      .cap-item:nth-child(even) { padding-left: 0; border-left: none; }
       .team-grid { grid-template-columns: 1fr 1fr; }
-      #contact .section-inner { grid-template-columns: 1fr; gap: 3rem; }
+      #contact .section-inner { grid-template-columns: 1fr; gap: 3.5rem; }
     }
 
     @media (max-width: 640px) {
@@ -764,11 +672,12 @@
         padding: 1.5rem 1.4rem 2rem;
       }
       .nav-toggle { display: block; }
-      section { padding: 4rem 1.4rem; }
+      section { padding: 4.5rem 1.4rem; }
       #hero { padding: 7rem 1.4rem 4rem; }
       .land-pillars { grid-template-columns: 1fr; }
       .team-grid { grid-template-columns: 1fr; }
       footer { padding: 1.5rem 1.4rem; }
+      .section-image-placeholder { height: 260px; }
     }
   </style>
 </head>
@@ -778,11 +687,11 @@
 <nav id="nav">
   <a href="#hero" class="nav-logo">Yaxche</a>
   <ul class="nav-links" id="navLinks">
-    <li><a href="#who">Who We Are</a></li>
     <li><a href="#land">Why Costa Rica</a></li>
     <li><a href="#capabilities">How We Work</a></li>
-    <li><a href="#team">Team</a></li>
-    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+    <li><a href="#who">Who We Are</a></li>
+    <li><a href="#team">The Team</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
     <span></span><span></span><span></span>
@@ -791,59 +700,40 @@
 
 <!-- HERO -->
 <section id="hero">
-  <div class="hero-eyebrow">Costa Rica</div>
-  <h1 class="hero-title">Resource expertise.<br /><em>Land opportunity.</em><br />Costa Rica.</h1>
-  <p class="hero-sub">Yaxche</p>
-  <p class="hero-tagline">Advisory services for qualified international investors looking for stable, well-structured access to one of Latin America's most resilient markets.</p>
-  <a href="#contact" class="btn-primary">Get in Touch</a>
+  <div class="hero-eyebrow">Yaxche</div>
+  <h1 class="hero-title">Those who preserve wealth across generations have always known: <em>land endures.</em></h1>
+  <div class="hero-divider"></div>
+  <p class="hero-body">We find it, verify it, and walk with you through every step of making it your legacy.</p>
+  <p class="hero-location">Costa Rica</p>
+  <p class="hero-sub">One of the world's most undiscovered markets.</p>
+  <a href="#contact" class="btn-primary">Begin the Conversation</a>
   <div class="hero-scroll">Explore</div>
 </section>
 
-<!-- WHO WE ARE -->
-<section id="who">
-  <div class="section-inner">
-    <div class="section-label">Who We Are</div>
-    <h2>A team built on fifteen years of <em>resource expertise</em></h2>
-    <p class="lead">Yaxche is an advisory firm focused on business opportunities in Costa Rica. Our work covers land banking, resource sector advisory, and a broader set of opportunities our team sources through years of local and international relationships.</p>
-    <p class="lead">We work with investors and partners who want a well-structured entry into one of Latin America's most stable markets. Costa Rica stands out for its political continuity, full foreign property rights, water security, and a legal framework that has protected private land ownership for over 75 years.</p>
-    <div class="who-grid">
-      <div class="who-stat">
-        <div class="num">15<em>+</em></div>
-        <p>Years of resource sector experience across the Americas</p>
-      </div>
-      <div class="who-stat">
-        <div class="num">CR</div>
-        <p>Costa Rica: political stability, water security, and legal clarity in one market</p>
-      </div>
-      <div class="who-stat">
-        <div class="num">4</div>
-        <p>Core service areas from sourcing through delivery</p>
-      </div>
-      <div class="who-stat">
-        <div class="num">5</div>
-        <p>Specialists across Canada, the US, and Costa Rica</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY COSTA RICA -->
+<!-- WHILE OTHERS LOOK ELSEWHERE -->
 <section id="land">
   <div class="section-inner">
     <div class="section-label">Why Costa Rica</div>
-    <h2>The case for <em>Costa Rica</em></h2>
-    <p class="lead">Land banking is the practice of securing land for the resources it holds and sustains. Well-informed families have used it for generations to build lasting wealth. Costa Rica has the conditions this strategy needs, and institutional capital has not yet arrived.</p>
-    <div class="divider"></div>
-    <div class="land-pillars" style="grid-template-columns: repeat(4, 1fr);">
+    <h2>While Others Look <em>Elsewhere</em></h2>
+
+    <p class="lead">Those who think in generations are quietly securing something no market can manufacture: land with renewable freshwater, political stability, and the ability to produce food.</p>
+    <p class="lead">From family offices in London to sovereign funds in the Gulf, from the mountains of New Zealand to the valleys of Uruguay, the thesis is the same. Land with the right fundamentals holds value across generations, currencies, and cycles.</p>
+    <p class="lead">Costa Rica has every condition this strategy requires. It remains, for now, largely undiscovered.</p>
+
+    <div class="section-image">
+      <div class="section-image-placeholder">Image: Aerial Costa Rica. Vast. Wild.</div>
+    </div>
+
+    <div class="land-pillars">
       <div class="pillar">
         <div class="pillar-icon">∿</div>
         <h3>Freshwater Security</h3>
-        <p>Year-round rainfall and renewable river systems. Water is now a traded financial instrument (CME Group, NQH2O). Land with embedded freshwater is becoming a strategic resource.</p>
+        <p>Families who own land with year-round freshwater access in a stable jurisdiction will hold one of the most valuable assets of the next generation. Costa Rica's rivers and aquifers renew continuously. Water is now a traded financial instrument (CME Group, NQH2O).</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">⚖</div>
-        <h3>Legal Stability</h3>
-        <p>Continuous democracy since 1949. Military abolished constitutionally. Full property rights for foreign nationals, identical to citizens. Clear title through the Registro Nacional.</p>
+        <h3>Legal and Political Stability</h3>
+        <p>Continuous democracy since 1949. Military abolished constitutionally. Full property rights for foreign nationals, identical to citizens. No approval process. No historical precedent for expropriation. Ranked 58th globally on the 2024 Global Peace Index.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">◈</div>
@@ -853,149 +743,87 @@
       <div class="pillar">
         <div class="pillar-icon">△</div>
         <h3>Climate Resilience</h3>
-        <p>Elevation buffers against sea-level rise, extreme heat, and hurricane risk. Stable year-round temperate climate. Ranked 58th globally on the 2024 Global Peace Index.</p>
+        <p>Elevation buffers against sea-level rise, extreme heat, and hurricane risk. Stable year-round temperate climate.</p>
       </div>
     </div>
 
     <div class="residency-note">
       <strong>Investor Residency pathway:</strong> A qualifying real estate investment of USD $150,000 or more makes a foreign national eligible to apply for Costa Rican Investor Residency, including spouse and dependent children. No full-time presence required to maintain status.
     </div>
-
-    <div class="compare-wrap">
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th></th>
-            <th>New Zealand</th>
-            <th>Australia</th>
-            <th>Uruguay</th>
-            <th>Portugal</th>
-            <th class="highlight">Costa Rica</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="row-label">Foreign ownership</td>
-            <td>OIO approval required.</td>
-            <td>FIRB approval above AUD $15M.</td>
-            <td>Unrestricted.</td>
-            <td>Non-EU faces restrictions. Golden Visa closed 2023.</td>
-            <td class="highlight">Unrestricted. Full rights identical to citizens.</td>
-          </tr>
-          <tr>
-            <td class="row-label">Residency via investment</td>
-            <td>No land-linked pathway. NZD $5M+ required.</td>
-            <td>No direct land-linked pathway.</td>
-            <td>Tax residency possible. No minimum.</td>
-            <td>Real estate route closed since 2023.</td>
-            <td class="highlight">USD $150,000 qualifying real estate. Full family included.</td>
-          </tr>
-          <tr>
-            <td class="row-label">Foreign income tax</td>
-            <td>Foreign income taxable in most cases.</td>
-            <td>Foreign income taxable.</td>
-            <td>Territorial system. Some exemptions.</td>
-            <td>EU-standard. Foreign income generally taxable.</td>
-            <td class="highlight">Costa Rica does not tax foreign-sourced income for residents.</td>
-          </tr>
-          <tr>
-            <td class="row-label">Institutional capital</td>
-            <td>High. Early-mover window closed.</td>
-            <td>Very high. Mature market.</td>
-            <td>High and growing. Prices at 25-year record.</td>
-            <td>High. Premium rural land fully priced.</td>
-            <td class="highlight">Low. Institutional capital has not yet arrived. Window open.</td>
-          </tr>
-          <tr>
-            <td class="row-label">Freshwater security</td>
-            <td>Good. Stress increasing in some regions.</td>
-            <td>Variable. Murray-Darling severely stressed.</td>
-            <td>Moderate. No severe stress.</td>
-            <td>Southern Europe increasingly drought-exposed.</td>
-            <td class="highlight">Exceptional. Year-round renewable rivers and aquifers.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
   </div>
 </section>
 
-<!-- HOW WE WORK -->
+<!-- FROM INTRODUCTION TO LEGACY -->
 <section id="capabilities">
   <div class="section-inner">
     <div class="section-label">How We Work</div>
-    <h2><em>How</em> we work</h2>
-    <p class="lead">Yaxche does not simply present opportunities. We manage the full pathway from first introduction through to closing, supported by a team with deep roots in Costa Rica and international transaction experience.</p>
+    <h2>From Introduction <em>to Legacy</em></h2>
+
+    <p class="lead">We walk the full path with you. From the moment we present a property through to the day it carries your family's name, and well beyond.</p>
+    <p class="lead">Purchase from anywhere in the world. Build without being there. Hold it, grow it, and pass it on, with a team that manages every detail to the same standard we would apply if it were our own.</p>
+
     <div class="process-list">
       <div class="process-item">
         <div class="process-num">1</div>
         <div>
-          <h3>Introduction and Qualification</h3>
-          <p>We present verified, off-market land opportunities in Costa Rica to qualified international buyers. All opportunities are independently assessed before presentation.</p>
+          <h3>The Right Opportunity</h3>
+          <p>Every property we present is verified, off-market, and independently assessed. You see only what exceeds the standard.</p>
         </div>
       </div>
       <div class="process-item">
         <div class="process-num">2</div>
         <div>
-          <h3>Legal and Structural Review</h3>
-          <p>Our Costa Rican legal counsel conducts full title verification, ownership structure review, and advises on the most appropriate acquisition structure for the buyer's jurisdiction and objectives.</p>
+          <h3>Structure Built for Generations</h3>
+          <p>Our Costa Rican legal counsel reviews title, ownership structure, and advises on the acquisition vehicle best suited to your jurisdiction, your heirs, and your long-term intent. The transaction can be completed from anywhere in the world: Switzerland, Dubai, London, or wherever you are.</p>
         </div>
       </div>
       <div class="process-item">
         <div class="process-num">3</div>
         <div>
-          <h3>Tax and Residency Advisory</h3>
-          <p>We guide buyers through the full tax picture in Costa Rica and in coordination with their home jurisdiction. For buyers pursuing Investor Residency, immigration counsel is engaged in parallel.</p>
+          <h3>Tax and Residency, Handled</h3>
+          <p>We coordinate the full tax picture across jurisdictions. For those pursuing Costa Rican Investor Residency, immigration counsel runs in parallel so nothing falls between the gaps.</p>
         </div>
       </div>
       <div class="process-item">
         <div class="process-num">4</div>
         <div>
-          <h3>Transaction and Closing</h3>
-          <p>We coordinate the full transaction process, from offer and negotiation through to title transfer and registration. The buyer has a single point of contact throughout.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="value-paths">
-      <div class="value-paths-label">Value creation pathways once acquired</div>
-      <div class="value-grid">
-        <div class="value-item">
-          <h4>Land Appreciation</h4>
-          <p>Acquire before recognition. Hold through repricing.</p>
-        </div>
-        <div class="value-item">
-          <h4>Agricultural Income</h4>
-          <p>Coffee, cacao, and tropical fruit income from day one.</p>
-        </div>
-        <div class="value-item">
-          <h4>Eco-Hospitality</h4>
-          <p>Boutique lodge or wellness retreat on a fraction of the land.</p>
-        </div>
-        <div class="value-item">
-          <h4>Carbon Credits</h4>
-          <p>Tropical forest restoration generating voluntary carbon income.</p>
-        </div>
-        <div class="value-item">
-          <h4>Family Reserve</h4>
-          <p>A private sanctuary stewarded across generations.</p>
+          <h3>Closing and Beyond</h3>
+          <p>When the transaction closes, the work does not stop. Whether you are building, holding for investment, or preparing a place for your family, we source and advise on construction, design, and operations, drawing only from the top tier of local expertise. Your investment is managed, maintained, and protected for as long as you choose to hold it.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TEAM -->
+<!-- ROOTED IN WHAT LASTS -->
+<section id="who">
+  <div class="section-inner">
+    <div class="section-label">Who We Are</div>
+    <h2>Rooted in <em>What Lasts</em></h2>
+
+    <p class="lead">Yaxche is the tree of life. Ancient, universal, and chosen deliberately, because no other symbol captures what this firm was built to do: connect people to land that holds meaning across generations, not just across market cycles.</p>
+    <p class="lead">A tree thinks in decades, not quarters. Its roots deepen over time. Its branches shelter what comes after. Its fruit feeds generations that never knew the hands that planted it. That is the standard we hold for every opportunity we bring forward: not what it returns this year, but what it leaves behind.</p>
+    <p class="lead">We work with people who want exactly that. Beyond a hedge. Beyond a trade. The foundation of something their children and grandchildren will stand on, land that offers clean water, political calm, agricultural abundance, and the kind of stability that removes survival from the equation entirely.</p>
+
+    <div class="section-image">
+      <div class="section-image-placeholder light">Image: Ancient tropical forest floor. Massive roots. Canopy light.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SIX EXPERTS. ONE MARKET. -->
 <section id="team">
   <div class="section-inner">
-    <div class="section-label">The People</div>
-    <h2>Our <em>team</em></h2>
-    <p class="lead">Legal, investment, development, and market expertise across three countries.</p>
+    <div class="section-label">The Team</div>
+    <h2>Six Experts. <em>One Market.</em></h2>
+
+    <p class="team-intro">Each of us has spent decades building mastery in a field: mining, law, international markets, construction, finance, and technology. What brought us together was certainty. A shared recognition, arrived at independently, that Costa Rica holds something the world has not yet fully understood. We built Yaxche for people who see what others will only understand in hindsight.</p>
+
     <div class="team-grid">
 
       <div class="team-card">
-        <div class="team-avatar" style="background: none; padding: 0; overflow: hidden;">
-          <img src="assets/elena.jpg" alt="Elena Alegria Mayer" style="width: 72px; height: 72px; object-fit: cover; object-position: center top; border-radius: 50%; display: block;" />
+        <div class="team-avatar">
+          <img src="assets/elena.jpg" alt="Elena Alegria Mayer" />
         </div>
         <div class="team-name">Elena Alegria Mayer</div>
         <div class="team-title">Founder</div>
@@ -1005,33 +833,33 @@
           <span class="tag">Land Banking</span>
           <span class="tag">ESG Strategy</span>
         </div>
-        <p class="team-bio">JD/LLB. Fifteen years in mining and resource development across the Americas, bringing that experience to Costa Rica's land and resource opportunities.</p>
+        <p class="team-bio">The architect of Yaxche. JD/LLB and fifteen years in mining and resource development across the Americas, applied to identifying and structuring Costa Rica's most compelling land and resource opportunities.</p>
       </div>
 
       <div class="team-card">
         <div class="team-avatar">AC</div>
         <div class="team-name">Andres Calvo</div>
         <div class="team-title">Legal Counsel, Costa Rica</div>
-        <div class="team-location">San José, Costa Rica</div>
+        <div class="team-location">San Jose, Costa Rica</div>
         <div class="team-tags">
           <span class="tag">Real Estate Law</span>
           <span class="tag">Immigration</span>
           <span class="tag">Corporate Law</span>
         </div>
-        <p class="team-bio">One of Costa Rica's leading attorneys for high-value real estate, immigration, and business law. His clients are international investors and residents.</p>
+        <p class="team-bio">One of Costa Rica's most respected attorneys for high-value real estate, immigration, and business law. The legal foundation that makes every Yaxche transaction possible for international investors and families.</p>
       </div>
 
       <div class="team-card">
         <div class="team-avatar">ES</div>
         <div class="team-name">Eugenia Sanchez</div>
         <div class="team-title">International Markets</div>
-        <div class="team-location">San José, Costa Rica</div>
+        <div class="team-location">San Jose, Costa Rica</div>
         <div class="team-tags">
           <span class="tag">Middle East Markets</span>
           <span class="tag">Export &amp; Trade</span>
           <span class="tag">FDI</span>
         </div>
-        <p class="team-bio">Entrepreneur with gourmet export brands in Costa Rica and advisory work across the Middle East in data infrastructure, blockchain, and fintech.</p>
+        <p class="team-bio">Entrepreneur, exporter, and cross-border advisor with operating businesses in Costa Rica and active advisory relationships across the Middle East in data infrastructure, blockchain, and fintech. The bridge between Costa Rica and global capital.</p>
       </div>
 
       <div class="team-card">
@@ -1042,9 +870,9 @@
         <div class="team-tags">
           <span class="tag">Permitting</span>
           <span class="tag">Construction</span>
-          <span class="tag">Rental Ops</span>
+          <span class="tag">Rental Operations</span>
         </div>
-        <p class="team-bio">Manages development in Costa Rica from permitting and construction through to delivery and ongoing rental property management.</p>
+        <p class="team-bio">The person who makes it real on the ground. Manages the full development lifecycle in Costa Rica from permitting and construction through to delivery and ongoing property operations, so investors never have to be there to know their asset is in good hands.</p>
       </div>
 
       <div class="team-card">
@@ -1056,12 +884,12 @@
           <span class="tag">Investor Relations</span>
           <span class="tag">Partnerships</span>
         </div>
-        <p class="team-bio">Builds the relationships that bring international capital to Costa Rica.</p>
+        <p class="team-bio">The relationship builder. Brings international capital into the Yaxche ecosystem through a network of investors and partners who understand that the best opportunities are found before the world catches up.</p>
       </div>
 
       <div class="team-card">
-        <div class="team-avatar" style="background: none; padding: 0; overflow: hidden;">
-          <img src="assets/marcos.jpeg" alt="Marcos Martin Gomez" style="width: 72px; height: 72px; object-fit: cover; object-position: center top; border-radius: 50%; display: block;" />
+        <div class="team-avatar">
+          <img src="assets/marcos.jpeg" alt="Marcos Martin Gomez" />
         </div>
         <div class="team-name">Marcos Martin Gomez</div>
         <div class="team-title">Technology and Digital Infrastructure</div>
@@ -1071,21 +899,30 @@
           <span class="tag">Project Execution</span>
           <span class="tag">Systems and Operations</span>
         </div>
-        <p class="team-bio">The architect behind Yaxché's digital infrastructure. Brings enterprise-level project management experience to the systems, platforms, and processes that keep a cross-border advisory operation running seamlessly.</p>
+        <p class="team-bio">The engineer behind Yaxche's digital infrastructure. Brings enterprise-level project management experience to the systems, platforms, and processes that keep a cross-border advisory operation running seamlessly.</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- THE CONVERSATION STARTS HERE -->
 <section id="contact">
   <div class="section-inner">
     <div>
-      <div class="section-label">Get in Touch</div>
-      <h2>Partnership and <em>investment inquiries</em></h2>
-      <p class="lead">For partnership inquiries, investment opportunities, or general questions, reach out directly.</p>
+      <div class="section-label">Contact</div>
+      <h2>The Conversation <em>Starts Here</em></h2>
+      <p class="contact-statement">If you have read this far, you already know whether this is for you. The right people find their way here.</p>
+      <p class="contact-note">We work with a small number of partners and investors at any given time. Reach out directly to Elena Alegria.</p>
       <div class="contact-details">
+        <div class="contact-row">
+          <div class="contact-label">Email</div>
+          <div class="contact-val"><a href="mailto:elena@yaxche.group">elena@yaxche.group</a></div>
+        </div>
+        <div class="contact-row">
+          <div class="contact-label">Phone</div>
+          <div class="contact-val"><a href="tel:+14164716912">+1 (416) 471-6912</a></div>
+        </div>
         <div class="contact-row">
           <div class="contact-label">Entity</div>
           <div class="contact-val">1000182258 Ontario Ltd, operating as Yaxche Legacy Resilience Investing</div>
@@ -1093,14 +930,6 @@
         <div class="contact-row">
           <div class="contact-label">Address</div>
           <div class="contact-val">88 Promenade Circle, Suite 1908<br />Thornhill, ON, L4J 9A4, Canada</div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-label">Phone</div>
-          <div class="contact-val"><a href="tel:+14164716912">+1 (416) 471-6912</a></div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-label">Email</div>
-          <div class="contact-val"><a href="mailto:elena@yaxche.group">elena@yaxche.group</a></div>
         </div>
       </div>
     </div>
@@ -1117,13 +946,13 @@
         </div>
         <div class="form-group">
           <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" placeholder="Investment inquiry, partnership, etc." />
+          <input type="text" id="subject" name="subject" placeholder="Investment inquiry, partnership, general information" />
         </div>
         <div class="form-group">
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Tell us about your interests or how we can help." required></textarea>
         </div>
-        <button type="submit" class="btn-submit" id="submitBtn">Send Message</button>
+        <button type="submit" class="btn-submit">Send Message</button>
       </form>
     </div>
   </div>
@@ -1136,19 +965,16 @@
 </footer>
 
 <script>
-  // Mobile nav
   const toggle = document.getElementById('navToggle');
   const links = document.getElementById('navLinks');
   toggle.addEventListener('click', () => links.classList.toggle('open'));
   links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
 
-  // Nav shadow on scroll
   const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
-    nav.style.boxShadow = window.scrollY > 20 ? '0 2px 24px rgba(0,0,0,0.35)' : 'none';
+    nav.style.boxShadow = window.scrollY > 20 ? '0 2px 32px rgba(0,0,0,0.4)' : 'none';
   });
 
-  // Contact form — mailto fallback (no backend)
   function handleSubmit(e) {
     e.preventDefault();
     const name = document.getElementById('name').value;
