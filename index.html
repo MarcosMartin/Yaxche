@@ -689,6 +689,42 @@
       letter-spacing: 0.05em;
     }
 
+    .footer-disclaimer {
+      max-width: 640px;
+      margin: 0.6rem auto 0;
+      font-size: 0.65rem !important;
+      line-height: 1.7;
+      color: rgba(247,243,237,0.18) !important;
+    }
+
+    .team-linkedin-name {
+      font-size: 0.68rem;
+      margin-bottom: 0.5rem;
+    }
+    .team-linkedin-name a {
+      color: rgba(184,154,90,0.6);
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: color 0.2s;
+    }
+    .team-linkedin-name a:hover { color: var(--gold-light); }
+
+    .team-firm {
+      font-size: 0.75rem;
+      color: rgba(247,243,237,0.5);
+      font-style: italic;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-qualifier {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1rem, 1.6vw, 1.15rem);
+      color: rgba(247,243,237,0.65);
+      margin-bottom: 1.8rem;
+      line-height: 1.6;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
       .land-pillars { grid-template-columns: 1fr 1fr; }
@@ -756,6 +792,7 @@
     <p class="hero-body">We find it, verify it, and walk with you through every step of making it your legacy.</p>
     <p class="hero-location">Costa Rica</p>
     <p class="hero-sub">One of the world's most undiscovered markets.</p>
+    <p class="hero-sub" style="font-size: clamp(0.85rem, 1.5vw, 1.05rem); letter-spacing: 0.12em; font-style: normal; color: rgba(247,243,237,0.45); margin-bottom: 3rem;">Private real estate advisory, Costa Rica.</p>
     <a href="#contact" class="btn-primary">Begin the Conversation</a>
   </div>
   <div class="hero-spacer"></div>
@@ -785,7 +822,7 @@
       <div class="pillar">
         <div class="pillar-icon">⚖</div>
         <h3>Legal and Political Stability</h3>
-        <p>Continuous democracy since 1949. Military abolished constitutionally. Full property rights for foreign nationals, identical to citizens. No approval process. No historical precedent for expropriation. Ranked 58th globally on the 2024 Global Peace Index.</p>
+        <p>Continuous democracy since 1949. Military abolished constitutionally. Full property rights for foreign nationals, identical to citizens. No approval process. No historical precedent for expropriation. Foreign-owned private land title has never been subject to government seizure. Ranked 58th globally on the 2024 Global Peace Index.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">◈</div>
@@ -840,7 +877,7 @@
         <div class="process-num">4</div>
         <div>
           <h3>Closing and Beyond</h3>
-          <p>When the transaction closes, the work does not stop. Whether you are building, holding for investment, or preparing a place for your family, we source and advise on construction, design, and operations, drawing only from the top tier of local expertise. Your investment is managed, maintained, and protected for as long as you choose to hold it.</p>
+          <p>When the transaction closes, the work does not stop. Whether you are building, holding for investment, or preparing a place for your family, we source and advise on construction, design, and operations, drawing only from the top tier of local expertise. Your investment is managed, maintained, and protected for as long as you choose to hold it. Yaxche is compensated through the transaction. There is no advisory fee to the buyer.</p>
         </div>
       </div>
     </div>
@@ -869,7 +906,7 @@
     <div class="section-label">The Team</div>
     <h2>Six Experts. <em>One Market.</em></h2>
 
-    <p class="team-intro">Each of us has spent decades building mastery in a field: mining, law, international markets, construction, finance, and technology. What brought us together was certainty. A shared recognition, arrived at independently, that Costa Rica holds something the world has not yet fully understood. We built Yaxche for people who see what others will only understand in hindsight.</p>
+    <p class="team-intro">Each of us has spent decades building mastery in a field: mining, law, international markets, construction, finance, and technology. What brought us together was certainty. Yaxche is newly formed. The experience we bring is not. A shared recognition, arrived at independently, that Costa Rica holds something the world has not yet fully understood. We built Yaxche for people who see what others will only understand in hindsight.</p>
 
     <div class="team-grid">
 
@@ -878,6 +915,7 @@
           <img src="assets/elena.jpg" alt="Elena Alegria Mayer" />
         </div>
         <div class="team-name">Elena Alegria Mayer</div>
+        <div class="team-linkedin-name"><a href="https://www.linkedin.com/in/mayer-elena/" target="_blank" rel="noopener">linkedin.com/in/mayer-elena</a></div>
         <div class="team-title">Founder</div>
         <div class="team-location">Toronto, Canada</div>
         <div class="team-tags">
@@ -892,7 +930,9 @@
       <div class="team-card">
         <div class="team-avatar"><img src="assets/Andres.jpg" alt="Andres Calvo" /></div>
         <div class="team-name">Andres Calvo</div>
+        <div class="team-linkedin-name"><a href="https://www.linkedin.com/in/andres-calvo-herra-a68397a6" target="_blank" rel="noopener">linkedin.com/in/andres-calvo-herra-a68397a6</a></div>
         <div class="team-title">Legal Counsel, Costa Rica</div>
+        <div class="team-firm">Lara Legal Corp</div>
         <div class="team-location">San Jose, Costa Rica</div>
         <div class="team-tags">
           <span class="tag">Real Estate Law</span>
@@ -906,6 +946,7 @@
       <div class="team-card">
         <div class="team-avatar"><img src="assets/Eugenia.jpg" alt="Eugenia Sanchez" /></div>
         <div class="team-name">Eugenia Sanchez</div>
+        <div class="team-linkedin-name"><a href="https://www.linkedin.com/in/eugenia-sanchez-b3b5b6192/" target="_blank" rel="noopener">linkedin.com/in/eugenia-sanchez-b3b5b6192</a></div>
         <div class="team-title">International Markets</div>
         <div class="team-location">San Jose, Costa Rica</div>
         <div class="team-tags">
@@ -933,6 +974,7 @@
       <div class="team-card">
         <div class="team-avatar"><img src="assets/Sanam.jpg" alt="Sanam Bakhshi" /></div>
         <div class="team-name">Sanam Bakhshi</div>
+        <div class="team-linkedin-name"><a href="https://www.linkedin.com/in/sanam-bakhshi" target="_blank" rel="noopener">linkedin.com/in/sanam-bakhshi</a></div>
         <div class="team-title">Investor Relations</div>
         <div class="team-location">Toronto, Canada</div>
         <div class="team-tags">
@@ -948,6 +990,7 @@
           <img src="assets/marcos.jpeg" alt="Marcos Martin Gomez" />
         </div>
         <div class="team-name">Marcos Martin Gomez</div>
+        <div class="team-linkedin-name"><a href="https://www.linkedin.com/in/marcosmarting/" target="_blank" rel="noopener">linkedin.com/in/marcosmarting</a></div>
         <div class="team-title">Technology and Digital Infrastructure</div>
         <div class="team-location">Barcelona, Spain / Toronto, Canada</div>
         <div class="team-tags">
@@ -992,6 +1035,7 @@
     </div>
 
     <div class="contact-form-side">
+      <p class="contact-qualifier">We work with accredited investors, family offices, and qualified purchasers.</p>
       <form id="contactForm">
         <div class="form-group">
           <label for="name">Full Name</label>
@@ -1026,6 +1070,7 @@
 <footer>
   <div class="footer-logo">Yaxche</div>
   <p>&copy; 2026 Yaxche. All rights reserved.</p>
+  <p class="footer-disclaimer">Yaxche does not provide regulated financial or investment advice. All engagements are conducted on a private advisory basis. Investors are encouraged to seek independent legal and tax counsel.</p>
 </footer>
 
 <script>
