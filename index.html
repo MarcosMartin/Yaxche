@@ -328,37 +328,37 @@
 
     .land-pillars {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 2px;
       margin-top: 3.5rem;
     }
 
     .pillar {
       background: rgba(255,255,255,0.05);
-      padding: 2.4rem 2rem;
-      border-top: 1px solid rgba(184,154,90,0.4);
+      padding: 3rem 2.8rem;
+      border-top: 2px solid rgba(184,154,90,0.5);
     }
 
     .pillar-icon {
       font-family: var(--serif);
-      font-size: 2rem;
+      font-size: 2.4rem;
       color: var(--gold);
-      margin-bottom: 1.1rem;
+      margin-bottom: 1.2rem;
       font-style: italic;
     }
 
     .pillar h3 {
       font-family: var(--serif);
       font-weight: 400;
-      font-size: 1.15rem;
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
       color: var(--cream);
-      margin-bottom: 0.8rem;
+      margin-bottom: 1rem;
     }
 
     .pillar p {
-      font-size: 0.85rem;
+      font-size: 1rem;
       color: rgba(247,243,237,0.82);
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
     .residency-note {
@@ -383,45 +383,50 @@
     #capabilities .lead { color: rgba(247,243,237,0.85); }
 
     .process-list {
-      margin-top: 3rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      margin-top: 3.5rem;
+      display: flex;
+      flex-direction: column;
       gap: 0;
     }
 
     .process-item {
-      padding: 2.5rem 0;
-      border-top: 1px solid rgba(255,255,255,0.1);
       display: grid;
-      grid-template-columns: 5rem 1fr;
-      gap: 1rem;
+      grid-template-columns: 7rem 1fr;
+      gap: 2.5rem;
       align-items: start;
+      padding: 3rem 0;
+      border-top: 1px solid rgba(184,154,90,0.2);
     }
 
-    .process-item:nth-child(odd) { padding-right: 3.5rem; }
-    .process-item:nth-child(even) { padding-left: 3.5rem; border-left: 1px solid rgba(255,255,255,0.1); }
+    .process-item:last-child { border-bottom: 1px solid rgba(184,154,90,0.2); }
+
+    .process-item:nth-child(odd) { padding-right: 0; }
+    .process-item:nth-child(even) { padding-left: 0; border-left: none; }
 
     .process-num {
       font-family: var(--serif);
-      font-size: 3.5rem;
+      font-size: clamp(4rem, 7vw, 6rem);
       font-weight: 300;
-      color: rgba(184,154,90,0.4);
+      color: rgba(184,154,90,0.25);
       line-height: 1;
-      padding-top: 0.1rem;
+      padding-top: 0.2rem;
+      letter-spacing: -0.02em;
     }
 
     .process-item h3 {
       font-family: var(--serif);
       font-weight: 400;
-      font-size: 1.25rem;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
       color: var(--cream);
-      margin-bottom: 0.7rem;
+      margin-bottom: 0.9rem;
+      line-height: 1.2;
     }
 
     .process-item p {
-      font-size: 0.92rem;
+      font-size: clamp(0.95rem, 1.4vw, 1.08rem);
       color: rgba(247,243,237,0.75);
-      line-height: 1.85;
+      line-height: 1.9;
+      max-width: 72ch;
     }
 
     /* ── ROOTED IN WHAT LASTS (Who We Are) ── */
@@ -437,24 +442,25 @@
     #team { background: var(--green-deep); }
 
     .team-intro {
-      font-family: var(--serif);
-      font-size: clamp(1rem, 1.8vw, 1.2rem);
-      font-style: italic;
-      color: var(--text-mid);
-      max-width: 62ch;
-      line-height: 1.8;
-      margin-bottom: 3.5rem;
+      font-family: var(--sans);
+      font-weight: 300;
+      font-size: 1.15rem;
+      font-style: normal;
+      color: var(--text-dark);
+      max-width: none;
+      line-height: 1.9;
+      margin-bottom: 4rem;
     }
 
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3.5rem 2.5rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem 4rem;
     }
 
     .team-avatar {
-      width: 130px;
-      height: 130px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       background: var(--cream-dark);
       margin-bottom: 1.4rem;
@@ -469,8 +475,8 @@
     }
 
     .team-avatar img {
-      width: 130px;
-      height: 130px;
+      width: 160px;
+      height: 160px;
       object-fit: cover;
       object-position: center top;
       border-radius: 50%;
@@ -480,7 +486,7 @@
     .team-name {
       font-family: var(--serif);
       font-weight: 400;
-      font-size: 1.15rem;
+      font-size: clamp(1.2rem, 1.8vw, 1.5rem);
       color: var(--green-deep);
       margin-bottom: 0.2rem;
     }
@@ -517,7 +523,7 @@
     }
 
     .team-bio {
-      font-size: 0.92rem;
+      font-size: 1rem;
       color: var(--text-dark);
       line-height: 1.8;
     }
@@ -543,7 +549,7 @@
     #team h2 em { color: var(--gold-light); }
     #team .section-label { color: var(--gold-light); }
     #team .section-label::before { background: var(--gold-light); }
-    #team .team-intro { color: rgba(247,243,237,0.75); }
+    #team .team-intro { color: rgba(247,243,237,0.85); }
     #team .team-name { color: var(--cream); }
     #team .team-location { color: rgba(247,243,237,0.5); }
     #team .tag { color: rgba(247,243,237,0.85); border-color: rgba(184,154,90,0.6); }
@@ -727,13 +733,10 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 1024px) {
-      .land-pillars { grid-template-columns: 1fr 1fr; }
+      .process-item { grid-template-columns: 5rem 1fr; gap: 1.5rem; }
     }
 
     @media (max-width: 900px) {
-      .process-list { grid-template-columns: 1fr; }
-      .process-item:nth-child(odd) { padding-right: 0; }
-      .process-item:nth-child(even) { padding-left: 0; border-left: none; }
       .team-grid { grid-template-columns: 1fr 1fr; }
       #contact .section-inner { grid-template-columns: 1fr; gap: 3.5rem; }
     }
@@ -761,6 +764,9 @@
       .hero-spacer { display: none; }
       .land-pillars { grid-template-columns: 1fr; }
       .team-grid { grid-template-columns: 1fr; }
+      .process-item { grid-template-columns: 4rem 1fr; gap: 1rem; }
+      .team-avatar { width: 130px; height: 130px; }
+      .team-avatar img { width: 130px; height: 130px; }
       footer { padding: 1.5rem 1.4rem; }
       .section-image-placeholder { height: 260px; }
     }
